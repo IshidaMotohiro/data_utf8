@@ -3419,18 +3419,18 @@ res20M.t3 <- res20M.t2[names(res20M.t2) %in%  okinawa.lab] #row.names(okinawa.t)
 
 okinawa.DF <- NULL
 
-okinawa.DF <- data.frame(word = names(res20M.t3), id = rep("20M",length(res20M.t3) ), Freq = res20M.t3)
+okinawa.DF <- data.frame(word = names(res20M.t3), id = rep("20M",length(res20M.t3) ), Freq = as.integer(res20M.t3))
 
 okinawa.DF <- rbind(okinawa.DF,
-      data.frame(word = names(res20F.t3), id = rep("20F", length(res20F.t3)), Freq = res20F.t3),
-      data.frame(word = names(res30M.t3), id = rep("30M", length(res30M.t3)), Freq = res30M.t3),
-      data.frame(word = names(res30F.t3), id = rep("30F", length(res30F.t3)), Freq = res30F.t3),
-      data.frame(word = names(res40M.t3), id = rep("40M", length(res40M.t3)), Freq = res40M.t3),
-      data.frame(word = names(res40F.t3), id = rep("40F", length(res40F.t3)), Freq = res40F.t3),
-      data.frame(word = names(res50M.t3), id = rep("50M", length(res50M.t3)), Freq = res50M.t3),
-      data.frame(word = names(res50F.t3), id = rep("50F", length(res50F.t3)), Freq = res50F.t3),
-      data.frame(word = names(res60M.t3), id = rep("60M", length(res60M.t3)), Freq = res60M.t3),
-      data.frame(word = names(res60F.t3), id = rep("60F", length(res60F.t3)), Freq = res60F.t3))
+      data.frame(word = names(res20F.t3), id = rep("20F", length(res20F.t3)), Freq = as.intege(res20F.t3)),
+      data.frame(word = names(res30M.t3), id = rep("30M", length(res30M.t3)), Freq = as.intege(res30M.t3)),
+      data.frame(word = names(res30F.t3), id = rep("30F", length(res30F.t3)), Freq = as.intege(res30F.t3)),
+      data.frame(word = names(res40M.t3), id = rep("40M", length(res40M.t3)), Freq = as.intege(res40M.t3)),
+      data.frame(word = names(res40F.t3), id = rep("40F", length(res40F.t3)), Freq = as.intege(res40F.t3)),
+      data.frame(word = names(res50M.t3), id = rep("50M", length(res50M.t3)), Freq = as.intege(res50M.t3)),
+      data.frame(word = names(res50F.t3), id = rep("50F", length(res50F.t3)), Freq = as.intege(res50F.t3)),
+      data.frame(word = names(res60M.t3), id = rep("60M", length(res60M.t3)), Freq = as.intege(res60M.t3)),
+      data.frame(word = names(res60F.t3), id = rep("60F", length(res60F.t3)), Freq = as.intege(res60F.t3)))
 
 okinawa.t <- xtabs(Freq ~ word + id, data = okinawa.DF)
 row.names( okinawa.t )
